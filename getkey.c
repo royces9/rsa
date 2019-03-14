@@ -45,10 +45,14 @@ void print_key(struct key *a) {
 
 
 int main(int argc, char **argv) {
+	if(argc != 4) {
+		puts("3 args required: p, q, e");
+		return 1;
+	}
+	
 	uint64_t p = atoi(argv[1]);
 	uint64_t q = atoi(argv[2]);
-	uint64_t e = 17;
-	//uint64_t e = (1 << 16) + 1;
+	uint64_t e = atoi(argv[3]);
 	
 	uint64_t n = p * q;
 	uint64_t ln = lambda(p, q);
