@@ -30,9 +30,8 @@ int main(int argc, char **argv) {
 	strcpy(out_f, argv[1]);
 	strcat(out_f, ".dcr");
 	int output = open(out_f, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH);
-
-	for(uint32_t buff = 0, r = read(input, &buff, sizeof(buff)); r; r = read(input, &buff, sizeof(buff))) {
-		printf("%d\n", buff);
+	;
+	for(uint32_t buff = 0, r = 0;  r = read(input, &buff, sizeof(buff)); ) {
 		uint32_t out = mod_exp(buff, e, n);
 
 		write(output, &out, sizeof(out));

@@ -3,9 +3,7 @@ CC=gcc
 
 all:
 	$(CC) getkey.c -o getkey
-	$(CC) encrypt.c -o encrypt
-	$(CC) decrypt.c -o decrypt
-
+	$(CC) rsa.c -o rsa
 
 clean:
 	del encrypt decrypt getkey
