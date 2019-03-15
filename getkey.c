@@ -31,9 +31,9 @@ uint64_t lambda(uint64_t p, uint64_t q) {
 }
 
 uint64_t mod_mult_inv(uint64_t a, uint64_t m) {
-	uint64_t n = 0;
-	for(; ((n * m + 1) % a) != 0; ++n);
-	return (n * m + 1) / a;
+	for(uint64_t n = m; ((m + 1) % a) != 0; m += n);
+
+	return (m + 1) / a;
 }
 
 

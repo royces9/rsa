@@ -15,7 +15,6 @@ typedef uint32_t buff_t;
 #define BYTE_SIZE 8
 
 
-
 int main(int argc, char **argv) {
 	if(argc != 4) {
 		puts("Three arguments required: flag file, key.");
